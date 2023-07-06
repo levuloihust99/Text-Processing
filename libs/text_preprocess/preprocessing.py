@@ -151,3 +151,15 @@ def whitespace_tokenize(text: Text):
         return []
     tokens = text.split()
     return tokens
+
+
+def run_strip_accents(text: Text) -> Text:
+    """Strips accents from a piece of text."""
+    text = unicodedata.normalize("NFD", text)
+    output = []
+    for char in text:
+        cat = unicodedata.category(char)
+        if cat == "Mn":
+            continue
+        output.append(char)
+    return "".join(output)
