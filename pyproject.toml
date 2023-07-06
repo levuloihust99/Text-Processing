@@ -1,0 +1,14 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "text_tools"
+version = "0.0.0"
+authors = [
+    {name = "Le Vu Loi", email = "levuloihust@gmail.com"}
+]
+description = "A tool for processing text. Several support functions are unicode normalize, removing accents, removing control characters, .etc"
+
+[tool.setuptools.package-dir]
+"text_tools" = "libs"
