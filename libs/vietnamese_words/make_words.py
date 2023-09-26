@@ -2,8 +2,8 @@ import json
 import argparse
 from pathlib import Path
 
-from trie import Trie
-from pair_rules import Rule
+from .trie import Trie
+from .pair_rules import Rule
 
 
 def main():

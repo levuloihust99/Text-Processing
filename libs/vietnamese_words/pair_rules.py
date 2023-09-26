@@ -30,6 +30,7 @@ class RuleType:
     UNION        = "UNION"
     NOT          = "NOT"
     EMPTY        = "EMPTY"
+    EXACT        = "EXACT"
 
 
 class Rule:
@@ -71,6 +72,14 @@ class Rule:
             return rule
         if data["type"] == RuleType.EMPTY:
             return EmptyRule(trie)
+        if data["type"] == RuleType.UNION:
+            child_rules = [Rule.parse(rule_data, trie) for rule_data in data["rules"]]
+            rule = UnionRule(trie, child_rules)
+            for r in child_rules:
+                r.parent = rule
+            return rule
+        if data["type"] == RuleType.EXACT:
+            return ExactRule(trie, data["entities"])
 
 
 class UnionRule(Rule):
@@ -131,9 +140,8 @@ class PrefixRule(Rule):
         self.rule = rule
     
     def execute(self):
-        prefix = self.get_prefix()
         entities = self.rule.execute()
-        entities = [prefix + e for e in entities]
+        entities = [self.prefix + e for e in entities]
         return entities
 
 
@@ -178,3 +186,14 @@ class EmptyRule(Rule):
 
     def execute(self):
         return []
+
+
+class ExactRule(Rule):
+    type = RuleType.EXACT
+
+    def __init__(self, trie: Trie, entities: List[Text], parent: Optional[Rule] = None):
+        super(ExactRule, self).__init__(trie, parent)
+        self.entities = entities
+
+    def execute(self):
+        return self.entities

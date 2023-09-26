@@ -278,6 +278,12 @@
                 "<END>": null
             },
             "<END>": null
+        },
+        "u": {
+            "<END>": null
+        },
+        "y": {
+            "<END>": null
         }
     },
     "ấ": {
@@ -298,6 +304,12 @@
         },
         "t": {
             "<END>": null
+        },
+        "u": {
+            "<END>": null
+        },
+        "y": {
+            "<END>": null
         }
     },
     "ầ": {
@@ -308,6 +320,12 @@
             "g": {
                 "<END>": null
             },
+            "<END>": null
+        },
+        "u": {
+            "<END>": null
+        },
+        "y": {
             "<END>": null
         }
     },
@@ -320,6 +338,12 @@
                 "<END>": null
             },
             "<END>": null
+        },
+        "u": {
+            "<END>": null
+        },
+        "y": {
+            "<END>": null
         }
     },
     "ẫ": {
@@ -330,6 +354,12 @@
             "g": {
                 "<END>": null
             },
+            "<END>": null
+        },
+        "u": {
+            "<END>": null
+        },
+        "y": {
             "<END>": null
         }
     },
@@ -350,6 +380,12 @@
             "<END>": null
         },
         "t": {
+            "<END>": null
+        },
+        "u": {
+            "<END>": null
+        },
+        "y": {
             "<END>": null
         }
     },
@@ -379,6 +415,9 @@
             "g": {
                 "<END>": null
             },
+            "<END>": null
+        },
+        "o": {
             "<END>": null
         },
         "p": {
@@ -435,6 +474,9 @@
         "<END>": null
     },
     "ẹ": {
+        "c": {
+            "<END>": null
+        },
         "m": {
             "<END>": null
         },
@@ -445,6 +487,12 @@
             "<END>": null
         },
         "o": {
+            "<END>": null
+        },
+        "p": {
+            "<END>": null
+        },
+        "t": {
             "<END>": null
         },
         "<END>": null
@@ -1174,6 +1222,9 @@
             }
         },
         "ó": {
+            "c": {
+                "<END>": null
+            },
             "n": {
                 "g": {
                     "<END>": null
@@ -1202,6 +1253,9 @@
             }
         },
         "ọ": {
+            "c": {
+                "<END>": null
+            },
             "n": {
                 "g": {
                     "<END>": null
@@ -1697,6 +1751,42 @@
         "y": {
             "a": {
                 "<END>": null
+            },
+            "ê": {
+                "n": {
+                    "<END>": null
+                }
+            },
+            "ế": {
+                "n": {
+                    "<END>": null
+                },
+                "t": {
+                    "<END>": null
+                }
+            },
+            "ề": {
+                "n": {
+                    "<END>": null
+                }
+            },
+            "ể": {
+                "n": {
+                    "<END>": null
+                }
+            },
+            "ễ": {
+                "n": {
+                    "<END>": null
+                }
+            },
+            "ệ": {
+                "n": {
+                    "<END>": null
+                },
+                "t": {
+                    "<END>": null
+                }
             },
             "m": {
                 "<END>": null

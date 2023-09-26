@@ -74,30 +74,51 @@
     "d": {"type": "EXPAND"},
     "đ": {"type": "EXPAND"},
     "g": {
-        "type": "NOT",
-        "rule": {
-            "type": "MULTI_EXPAND",
-            "prefixes": [
-                "i",
-                "í",
-                "ì",
-                "ỉ",
-                "ĩ",
-                "ị",
-                "e",
-                "é",
-                "è",
-                "ẻ",
-                "ẽ",
-                "ẹ",
-                "ê",
-                "ế",
-                "ề",
-                "ể",
-                "ễ",
-                "ệ"
-            ]
-        }
+        "type": "UNION",
+        "rules": [
+            {
+                "type": "NOT",
+                "rule": {
+                    "type": "MULTI_EXPAND",
+                    "prefixes": [
+                        "i",
+                        "í",
+                        "ì",
+                        "ỉ",
+                        "ĩ",
+                        "ị",
+                        "e",
+                        "é",
+                        "è",
+                        "ẻ",
+                        "ẽ",
+                        "ẹ",
+                        "ê",
+                        "ế",
+                        "ề",
+                        "ể",
+                        "ễ",
+                        "ệ"
+                    ]
+                }
+            },
+            {
+                "type": "EXACT",
+                "entities": [
+                    "í",
+                    "ì",
+                    "ỉ",
+                    "ĩ",
+                    "ị",
+                    "in",
+                    "ín",
+                    "ìn",
+                    "ỉn",
+                    "ĩn",
+                    "ịn"
+                ]
+            }
+        ]
     },
     "gh": {
         "type": "MULTI_EXPAND",
@@ -163,7 +184,13 @@
             "ề",
             "ể",
             "ễ",
-            "ệ"
+            "ệ",
+            "y",
+            "ý",
+            "ỳ",
+            "ỷ",
+            "ỹ",
+            "ỵ"
         ]
     },
     "kh": {"type": "EXPAND"},
@@ -226,15 +253,61 @@
         "type": "PREFIX",
         "prefix": "",
         "rule": {
-            "type": "TRUNCATE",
-            "pretrunc": "u",
-            "rule": {
-                "type": "PREFIX",
-                "prefix": "u",
-                "rule": {
-                    "type": "EXPAND"
+            "type": "UNION",
+            "rules": [
+                {
+                    "type": "TRUNCATE",
+                    "pretrunc": "u",
+                    "rule": {
+                        "type": "PREFIX",
+                        "prefix": "u",
+                        "rule": {
+                            "type": "EXPAND"
+                        }
+                    }
+                },
+                {
+                    "type": "MULTI_EXPAND",
+                    "prefixes": [
+                        "a",
+                        "á",
+                        "à",
+                        "ả",
+                        "ã",
+                        "ạ",
+                        "ă",
+                        "ắ",
+                        "ằ",
+                        "ẳ",
+                        "ẵ",
+                        "ặ",
+                        "â",
+                        "ấ",
+                        "ầ",
+                        "ẩ",
+                        "ẫ",
+                        "ậ",
+                        "e",
+                        "é",
+                        "è",
+                        "ẻ",
+                        "ẽ",
+                        "ẹ",
+                        "ê",
+                        "ế",
+                        "ề",
+                        "ể",
+                        "ễ",
+                        "ệ",
+                        "i",
+                        "í",
+                        "ì",
+                        "ỉ",
+                        "ĩ",
+                        "ị"
+                    ]
                 }
-            }
+            ]
         }
     },
     "r": {"type": "EXPAND"},
@@ -245,8 +318,22 @@
     "v": {"type": "EXPAND"},
     "x": {"type": "EXPAND"},
     "y": {
-        "type": "MULTI_EXPAND",
-        "prefixes": [
+        "type": "EXACT",
+        "entities": [
+            "êm",
+            "ếm",
+            "ềm",
+            "ểm",
+            "ễm",
+            "ệm",
+            "ên",
+            "ến",
+            "ền",
+            "ển",
+            "ễn",
+            "ện",
+            "ết",
+            "ệt",
             "êu",
             "ếu",
             "ều",
@@ -258,5 +345,6 @@
     "ỳ": {"type": "EMPTY"},
     "ỷ": {"type": "EMPTY"},
     "ỹ": {"type": "EMPTY"},
-    "ỵ": {"type": "EMPTY"}
+    "ỵ": {"type": "EMPTY"},
+    "": {"type": "EXPAND"}
 }

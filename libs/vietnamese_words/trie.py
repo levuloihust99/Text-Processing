@@ -1,4 +1,4 @@
-from characters import vietnamese_chars
+from .characters import vietnamese_chars
 
 character_sorting_score = {
     v: k for k, v in enumerate(vietnamese_chars)
