@@ -1,8 +1,8 @@
 import functools
 from typing import List, Text, Optional
 
-from trie import Trie
-from characters import vietnamese_chars
+from .trie import Trie
+from .characters import vietnamese_chars
 
 character_sorting_score = {
     v: k for k, v in enumerate(vietnamese_chars)
