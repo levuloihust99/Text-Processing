@@ -52,7 +52,7 @@ class Trie:
         L = [prefix + entity for entity in L]
         return L
     
-    def get_entities(self, key):
+    def get_entities(self, key=None):
         return self._get_entities(self.root, key)
 
     @staticmethod
